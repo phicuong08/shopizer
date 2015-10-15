@@ -233,12 +233,12 @@ public class ShoppingCategoryController {
 		if(!StringUtils.isBlank(ref) && ref.contains("c")) {
 			try {
 				//get preceding id from the reference chain
-				String categoryChain = ref.substring(ref.indexOf(Constants.REF_SPLITTER)+1);
-				int categoryPosition = categoryChain.indexOf(String.valueOf(category.getId()));
-				String sCategoryId = categoryChain.substring(categoryPosition++,categoryPosition++);
-				Long parentId = Long.parseLong(sCategoryId);
-				Category parent = categoryService.getById(parentId);
-				parentProxy = populator.populate(parent, new ReadableCategory(), store, language);
+//				String categoryChain = ref.substring(ref.indexOf(Constants.REF_SPLITTER)+1);
+//				int categoryPosition = categoryChain.indexOf(String.valueOf(category.getId()));
+//				String sCategoryId = categoryChain.substring(categoryPosition++,categoryPosition++);
+//				Long parentId = Long.parseLong(sCategoryId);
+//				Category parent = categoryService.getById(parentId);
+				parentProxy = populator.populate(/*parent*/category, new ReadableCategory(), store, language);
 			} catch(Exception e) {
 				LOGGER.error("Cannot parse category id to Long ",ref );
 			}

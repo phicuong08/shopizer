@@ -233,7 +233,7 @@ public class TaxServiceImpl
 			if(!StringUtils.isBlank(stateProvince)&& zone==null) {
 				taxRates = taxRateService.listByCountryStateProvinceAndTaxClass(country, stateProvince, taxClasses.get(taxClassId), store, language);
 			} else {
-				taxRates = taxRateService.listByCountryZoneAndTaxClass(country, zone, taxClasses.get(taxClassId), store, language);
+				//taxRates = taxRateService.listByCountryZoneAndTaxClass(country, zone, taxClasses.get(taxClassId), store, language);
 			}
 			
 			if(taxRates==null || taxRates.size()==0){
