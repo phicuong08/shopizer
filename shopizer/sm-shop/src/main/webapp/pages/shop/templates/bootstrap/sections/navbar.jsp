@@ -81,14 +81,14 @@ $(document).ready(function() {
 				<div class="span8 pull-right">
 
 						<nav id="menu" class="pull-right">
-                    					<ul id="mainMenu">
-                    						<!-- request contains url and url contains /shop -->
-											<li class="">  
-	                    					       <a href="<c:url value="/shop"/>" class="current">          
-	                    					            <span class="name"><s:message code="menu.home" text="Home"/></span>     
-	                    								<span class="desc"><s:message code="menu.home" text="Home"/></span>                                  
-	                    						   </a>                         
-	                    					</li>
+                                                    <ul id="mainMenu">
+                                                        <!-- request contains url and url contains /shop -->
+                                                        <li class="">  
+                                                            <a href="<c:url value="/shop"/>" class="current">          
+                                                                <span class="name"><s:message code="menu.home" text="Home"/></span>     
+                                                                <!--span class="desc"><s:message code="menu.home" text="Home"/></span-->                                  
+                                                            </a>                         
+                                                        </li>
 	
 	                    		            
 	                    		            <c:forEach items="${requestScope.TOP_CATEGORIES}" var="category">
