@@ -27,6 +27,7 @@ response.setDateHeader ("Expires", -1);
  
      <head>
         	 	<meta charset="utf-8">
+                        <link rel="shortcut icon" href=<c:url value="/resources/img/favicon.ico"/> type="image/x-icon"/>
     			<title><c:out value="${requestScope.PAGE_INFORMATION.pageTitle}" /></title>
     			<meta name="viewport" content="width=device-width, initial-scale=1.0">
     			<meta name="description" content="<c:out value="${requestScope.PAGE_INFORMATION.pageDescription}" />">
