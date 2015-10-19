@@ -237,16 +237,20 @@ public class ProductPriceUtils {
 		
 		NumberFormat currencyInstance = null;
 		
-		
 		if(store.isCurrencyFormatNational()) {
 			currencyInstance = NumberFormat.getCurrencyInstance(locale);//national
 		} else {
 			currencyInstance = NumberFormat.getCurrencyInstance();//international
 		}
 	    currencyInstance.setCurrency(currency);
-		
-	    
-	    return currencyInstance.format(amount.doubleValue());
+            if(currency.getCurrencyCode().equals("VND"))
+            {
+                return new String(""+amount+"VND");
+            }
+            else
+            {
+                return currencyInstance.format(amount.doubleValue());
+            }
 		
 
     }
