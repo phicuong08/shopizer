@@ -27,7 +27,7 @@ response.setDateHeader ("Expires", -1);
                     	<!-- Image column -->
 						<div id="img" class="span4 productMainImage">
 							<c:if test="${product.image!=null}">
-							<span id="mainImg"><img id="im-<c:out value="${product.image.id}"/>" alt="<c:out value="${product.description.name}"/>" src="<c:url value="${product.image.imageUrl}"/>" data-zoom-image="<sm:shopProductImage imageName="${product.image.imageName}" sku="${product.sku}" size="LARGE"/>"></span>												
+							<span id="mainImg"><img id="im-<c:out value="${product.image.id}"/>" alt="<c:out value="${product.description.name}"/>" src="<c:url value="${product.image.imageUrl}"/>" data-zoom-image="<c:url value="${product.image.imageUrl}"/>"></span>												
 							<script>
 								$(function() {
 									setImageZoom('im-<c:out value="${product.image.id}"/>');
