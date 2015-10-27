@@ -353,7 +353,7 @@ public class ShoppingOrderController extends AbstractController {
 			Order orderModel = this.commitOrder(order, request, locale);
 			super.setSessionAttribute(Constants.ORDER_ID, orderModel.getId(), request);
 			
-			return "redirect://shop/order/confirmation.html";
+			return "redirect:/shop/order/confirmation.html";
 			
 		} catch(Exception e) {
 			LOGGER.error("Error while commiting order",e);
@@ -698,7 +698,7 @@ public class ShoppingOrderController extends AbstractController {
 			}
 
 	        //redirect to completd
-	        return "redirect://shop/order/confirmation.html";
+	        return "redirect:/shop/order/confirmation.html";
 	  
 			
 
